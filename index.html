@@ -1,342 +1,427 @@
-export default function OnlyHopeWebsite() {
-  return (
-    <div className="min-h-screen bg-white text-slate-900">
-      {/* Header */}
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div>
-            <div className="text-xl font-bold tracking-tight">Only Hope Homes Family Asset Recovery</div>
-            <div className="text-xs text-slate-500">A brand of Only Hope Holdings LLC</div>
-          </div>
-          <nav className="hidden gap-8 text-sm md:flex">
-            <a href="#how-it-works" className="hover:text-slate-600">How It Works</a>
-            <a href="#who-we-help" className="hover:text-slate-600">Who We Help</a>
-            <a href="#faq" className="hover:text-slate-600">FAQ</a>
-            <a href="#contact" className="hover:text-slate-600">Contact</a>
-          </nav>
-          <a
-            href="#contact"
-            className="rounded-2xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
-          >
-            Check Eligibility
-          </a>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-          <div className="flex flex-col justify-center">
-            <div className="mb-4 inline-flex w-fit items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium uppercase tracking-wide text-slate-600 shadow-sm">
-              Helping families recover funds tied to property-related situations
-            </div>
-            <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              You may be owed money and not even know it.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Only Hope Homes Family Asset Recovery helps individuals and families identify and pursue potential surplus or unclaimed funds related to foreclosures, tax sales, and other property-related matters.
-            </p>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-              We focus on clarity, compassion, and results. If funds may be owed to you, we help you understand the next steps and guide you through the process.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#contact"
-                className="rounded-2xl bg-slate-900 px-6 py-4 text-center text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:opacity-95"
-              >
-                See If You May Qualify
-              </a>
-              <a
-                href="#how-it-works"
-                className="rounded-2xl border border-slate-300 bg-white px-6 py-4 text-center text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
-              >
-                Learn How It Works
-              </a>
-            </div>
-            <div className="mt-8 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <div className="text-sm font-semibold">No upfront fee messaging</div>
-                <div className="mt-1 text-sm text-slate-600">Explain your fee structure clearly in your agreement.</div>
-              </div>
-              <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <div className="text-sm font-semibold">Confidential process</div>
-                <div className="mt-1 text-sm text-slate-600">Professional, respectful communication from start to finish.</div>
-              </div>
-              <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <div className="text-sm font-semibold">Property record based</div>
-                <div className="mt-1 text-sm text-slate-600">We work from publicly available information and case review.</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Card */}
-          <div id="contact" className="flex items-center">
-            <div className="w-full rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/60">
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold tracking-tight">Request a confidential review</h2>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.
-                </p>
-              </div>
-              <form className="space-y-4">
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Full Name</label>
-                  <input
-                    type="text"
-                    placeholder="Your full name"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Phone Number</label>
-                  <input
-                    type="tel"
-                    placeholder="(000) 000-0000"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Email Address</label>
-                  <input
-                    type="email"
-                    placeholder="you@example.com"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Property Address or County (Optional)</label>
-                  <input
-                    type="text"
-                    placeholder="Property address or county"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Tell Us a Little About Your Situation (Optional)</label>
-                  <textarea
-                    rows={4}
-                    placeholder="Share anything that may help us review your case"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-2xl bg-slate-900 px-6 py-4 text-sm font-semibold text-white shadow-lg transition hover:opacity-95"
-                >
-                  Submit for Review
-                </button>
-                <p className="text-xs leading-5 text-slate-500">
-                  By submitting this form, you agree to be contacted by Only Hope Holdings LLC, doing business as Only Hope Homes Family Asset Recovery, regarding your inquiry.
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Bar */}
-      <section className="border-y border-slate-200 bg-slate-50">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 py-8 text-sm text-slate-600 sm:grid-cols-3 lg:px-8">
-          <div className="rounded-2xl bg-white p-5 shadow-sm">
-            <div className="font-semibold text-slate-900">Respectful communication</div>
-            <p className="mt-2">We know property-related financial situations can feel overwhelming. Our approach is patient and professional.</p>
-          </div>
-          <div className="rounded-2xl bg-white p-5 shadow-sm">
-            <div className="font-semibold text-slate-900">Clear next steps</div>
-            <p className="mt-2">We explain the process in simple terms so you understand what may be possible and what happens next.</p>
-          </div>
-          <div className="rounded-2xl bg-white p-5 shadow-sm">
-            <div className="font-semibold text-slate-900">Information-driven review</div>
-            <p className="mt-2">Our process is based on public records, case details, and client verification.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="max-w-3xl">
-          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">How it works</div>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">A simple process designed to help you move forward with confidence.</h2>
-          <p className="mt-4 text-lg leading-8 text-slate-600">
-            We help identify whether potential funds may be tied to your name or property situation, then guide you through the steps needed to pursue recovery.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-[2rem] border border-slate-200 p-8 shadow-sm">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-lg font-bold text-white">1</div>
-            <h3 className="text-xl font-semibold">Initial Review</h3>
-            <p className="mt-3 text-slate-600">
-              We review the details you provide and compare them with available records to determine whether funds may be involved.
-            </p>
-          </div>
-          <div className="rounded-[2rem] border border-slate-200 p-8 shadow-sm">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-lg font-bold text-white">2</div>
-            <h3 className="text-xl font-semibold">Verification & Guidance</h3>
-            <p className="mt-3 text-slate-600">
-              If your case appears eligible, we explain the process, required documents, and the next steps to move forward.
-            </p>
-          </div>
-          <div className="rounded-[2rem] border border-slate-200 p-8 shadow-sm">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-lg font-bold text-white">3</div>
-            <h3 className="text-xl font-semibold">Recovery Support</h3>
-            <p className="mt-3 text-slate-600">
-              We assist through the process of pursuing potential funds and keep communication clear from start to finish.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Who we help */}
-      <section id="who-we-help" className="bg-slate-950 text-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Who we help</div>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Support for individuals and families who may have funds waiting to be claimed.</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-300">
-              Every situation is different. We work with people who may have experienced a foreclosure, tax sale, inherited property issue, or another property-related event that may have resulted in excess or unclaimed funds.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {[
-              {
-                title: "Former homeowners",
-                text: "People who may have had a foreclosure or property-related matter and are unsure whether funds remain.",
-              },
-              {
-                title: "Heirs and family members",
-                text: "Families trying to determine whether a relative may have had funds tied to a property matter.",
-              },
-              {
-                title: "Property-related claimants",
-                text: "Individuals seeking clarity on whether they may be eligible to pursue unclaimed surplus funds.",
-              },
-              {
-                title: "Clients who need guidance",
-                text: "People who want help understanding the process, paperwork, and possible next steps.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-slate-300">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Why choose us</div>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">A caring, professional approach to a sensitive process.</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-              Our goal is simple: help people understand whether funds may be owed to them and provide professional support throughout the process.
-            </p>
-          </div>
-          <div className="grid gap-5">
-            {[
-              "We communicate clearly and respectfully.",
-              "We explain the process in plain language.",
-              "We focus on property-related records and case review.",
-              "We help clients understand documentation and next steps.",
-              "We maintain a confidential and professional experience.",
-            ].map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-200 p-5 shadow-sm">
-                <div className="font-medium">{item}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="bg-slate-50">
-        <div className="mx-auto max-w-5xl px-6 py-20 lg:px-8">
-          <div className="text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Frequently asked questions</div>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Answers to common questions</h2>
-          </div>
-          <div className="mt-12 space-y-4">
-            {[
-              {
-                q: "How do I know if funds may be owed to me?",
-                a: "If your situation involves a foreclosure, tax sale, inherited property issue, or another property-related matter, there may be funds tied to the case. We review available details and help determine whether a next step makes sense.",
-              },
-              {
-                q: "What information do I need to get started?",
-                a: "Usually your name, contact information, and any known property details help start the review. Additional documents may be requested later if needed.",
-              },
-              {
-                q: "Do you guarantee results?",
-                a: "No. Every matter is different, and outcomes depend on the facts, documentation, and applicable procedures. We never promise guaranteed results.",
-              },
-              {
-                q: "Are you a law firm?",
-                a: "No. Only Hope Homes Family Asset Recovery is not a law firm and does not provide legal advice. We provide professional recovery support and guidance based on public records and case review.",
-              },
-            ].map((item) => (
-              <details key={item.q} className="group rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <summary className="cursor-pointer list-none text-lg font-semibold marker:hidden">{item.q}</summary>
-                <p className="mt-4 leading-7 text-slate-600">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="rounded-[2.5rem] bg-slate-900 px-8 py-12 text-white shadow-2xl sm:px-12 sm:py-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Take the first step toward finding out whether funds may be waiting for you.</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-300">
-              If you believe a foreclosure, tax sale, or other property-related issue may have involved funds tied to your name or family, contact us today for a confidential review.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#contact"
-                className="rounded-2xl bg-white px-6 py-4 text-center text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
-              >
-                Request Your Review
-              </a>
-              <a
-                href="tel:+1-000-000-0000"
-                className="rounded-2xl border border-white/20 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Call (000) 000-0000
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 text-sm text-slate-600 lg:grid-cols-3 lg:px-8">
-          <div>
-            <div className="text-lg font-bold text-slate-900">Only Hope Homes Family Asset Recovery</div>
-            <p className="mt-3 leading-7">
-              A public-facing brand of <span className="font-medium">Only Hope Holdings LLC</span>, focused on helping individuals and families explore whether potential surplus or unclaimed funds may be tied to their property-related situations.
-            </p>
-          </div>
-          <div>
-            <div className="font-semibold text-slate-900">Contact</div>
-            <ul className="mt-3 space-y-2">
-              <li>Phone: (000) 000-0000</li>
-              <li>Email: info@onlyhopehomes.com</li>
-              <li>Hours: Mon–Fri, 9:00 AM–5:00 PM</li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-semibold text-slate-900">Important Notice</div>
-            <p className="mt-3 leading-7">
-              Only Hope Homes Family Asset Recovery is not a law firm and does not provide legal advice. No representation is made that funds are guaranteed or that every inquiry will qualify. Services are offered through Only Hope Holdings LLC.
-            </p>
-          </div>
-        </div>
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Only Hope Homes Family Asset Recovery</title>
+  <meta name="description" content="Only Hope Homes Family Asset Recovery helps individuals and families identify and pursue potential surplus or unclaimed funds tied to property-related situations." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+      --dark: #020617;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+    .btn-dark {
+      background: var(--dark);
+      color: white;
+    }
+    .btn-dark:hover,
+    .btn-light:hover,
+    .btn-outline:hover { opacity: 0.92; }
+    .btn-light {
+      background: white;
+      color: var(--dark);
+    }
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+    }
+    .brand-title { font-size: 20px; font-weight: 800; }
+    .brand-sub { font-size: 12px; color: var(--muted); }
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+    .hero {
+      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+      padding: 72px 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: white;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.05;
+      margin: 18px 0;
+    }
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+    .lead {
+      font-size: 19px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .sublead {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 780px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .mini-grid,
+    .three-grid,
+    .four-grid,
+    .two-grid {
+      display: grid;
+      gap: 18px;
+    }
+    .mini-grid { grid-template-columns: repeat(3, 1fr); margin-top: 30px; }
+    .three-grid { grid-template-columns: repeat(3, 1fr); }
+    .four-grid { grid-template-columns: repeat(4, 1fr); }
+    .two-grid { grid-template-columns: repeat(2, 1fr); align-items: start; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+    .contact-card { padding: 30px; }
+    .contact-card h3 { margin-top: 0; font-size: 28px; }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      font-size: 15px;
+      outline: none;
+      margin-bottom: 14px;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+    .section { padding: 78px 0; }
+    .section-light { background: var(--light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .dark-section {
+      background: var(--dark);
+      color: white;
+    }
+    .dark-section .muted,
+    .dark-section p { color: #cbd5e1; }
+    .dark-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 24px;
+    }
+    .num {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--dark);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .cta-box {
+      background: var(--dark);
+      color: white;
+      border-radius: 32px;
+      padding: 42px;
+      box-shadow: 0 20px 40px rgba(2, 6, 23, 0.18);
+    }
+    .footer {
+      border-top: 1px solid var(--border);
+      background: white;
+      padding: 40px 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 28px;
+    }
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    ul.clean li { margin-bottom: 8px; }
+    @media (max-width: 960px) {
+      .hero-grid,
+      .two-grid,
+      .footer-grid,
+      .four-grid,
+      .three-grid,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+      nav { display: none; }
+      .topbar-inner { align-items: flex-start; }
+      .cta-box { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <div class="brand-title">Only Hope Homes Family Asset Recovery</div>
+        <div class="brand-sub">A brand of Only Hope Holdings LLC</div>
+      </div>
+      <nav>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#who-we-help">Who We Help</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-dark">Check Eligibility</a>
     </div>
-  );
-}
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Helping families recover funds tied to property-related situations</div>
+        <h1>You may be owed money and not even know it.</h1>
+        <p class="lead">Only Hope Homes Family Asset Recovery helps individuals and families identify and pursue potential surplus or unclaimed funds related to foreclosures, tax sales, and other property-related matters.</p>
+        <p class="sublead">We focus on clarity, compassion, and results. If funds may be owed to you, we help you understand the next steps and guide you through the process.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-dark">See If You May Qualify</a>
+          <a href="#how-it-works" class="btn btn-outline">Learn How It Works</a>
+        </div>
+      </div>
+
+      <div id="contact" class="card contact-card">
+        <h3>Request a confidential review</h3>
+        <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
+        <form>
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name" />
+
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(000) 000-0000" />
+
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" />
+
+          <label>Property Address or County (Optional)</label>
+          <input type="text" placeholder="Property address or county" />
+
+          <label>Tell Us a Little About Your Situation (Optional)</label>
+          <textarea placeholder="Share anything that may help us review your case"></textarea>
+
+          <button type="submit" class="btn btn-dark" style="width:100%; border:none; cursor:pointer;">Submit for Review</button>
+          <p class="small muted">By submitting this form, you agree to be contacted by Only Hope Holdings LLC, doing business as Only Hope Homes Family Asset Recovery, regarding your inquiry.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container three-grid">
+      <div class="card">
+        <strong>Respectful communication</strong>
+        <p class="muted">We know property-related financial situations can feel overwhelming. Our approach is patient and professional.</p>
+      </div>
+      <div class="card">
+        <strong>Clear next steps</strong>
+        <p class="muted">We explain the process in simple terms so you understand what may be possible and what happens next.</p>
+      </div>
+      <div class="card">
+        <strong>Information-driven review</strong>
+        <p class="muted">Our process is based on public records, case details, and client verification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <p class="eyebrow">How it works</p>
+      <h2>A simple process designed to help you move forward with confidence.</h2>
+      <p class="sublead">We help identify whether potential funds may be tied to your name or property situation, then guide you through the steps needed to pursue recovery.</p>
+      <div class="three-grid" style="margin-top:32px;">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>Initial Review</h3>
+          <p class="muted">We review the details you provide and compare them with available records to determine whether funds may be involved.</p>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>Verification & Guidance</h3>
+          <p class="muted">If your case appears eligible, we explain the process, required documents, and the next steps to move forward.</p>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>Recovery Support</h3>
+          <p class="muted">We assist through the process of pursuing potential funds and keep communication clear from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section" id="who-we-help">
+    <div class="container">
+      <p class="eyebrow" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border-color:rgba(255,255,255,0.14);">Who we help</p>
+      <h2>Support for individuals and families who may have funds waiting to be claimed.</h2>
+      <p class="sublead" style="color:#cbd5e1;">Every situation is different. We work with people who may have experienced a foreclosure, tax sale, inherited property issue, or another property-related event that may have resulted in excess or unclaimed funds.</p>
+      <div class="four-grid" style="margin-top:32px;">
+        <div class="dark-card"><h3>Former homeowners</h3><p>People who may have had a foreclosure or property-related matter and are unsure whether funds remain.</p></div>
+        <div class="dark-card"><h3>Heirs and family members</h3><p>Families trying to determine whether a relative may have had funds tied to a property matter.</p></div>
+        <div class="dark-card"><h3>Property-related claimants</h3><p>Individuals seeking clarity on whether they may be eligible to pursue unclaimed surplus funds.</p></div>
+        <div class="dark-card"><h3>Clients who need guidance</h3><p>People who want help understanding the process, paperwork, and possible next steps.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-grid">
+      <div>
+        <p class="eyebrow">Why choose us</p>
+        <h2>A caring, professional approach to a sensitive process.</h2>
+        <p class="sublead">Our goal is simple: help people understand whether funds may be owed to them and provide professional support throughout the process.</p>
+      </div>
+      <div>
+        <div class="card"><strong>We communicate clearly and respectfully.</strong></div>
+        <div class="card" style="margin-top:14px;"><strong>We explain the process in plain language.</strong></div>
+        <div class="card" style="margin-top:14px;"><strong>We focus on property-related records and case review.</strong></div>
+        <div class="card" style="margin-top:14px;"><strong>We help clients understand documentation and next steps.</strong></div>
+        <div class="card" style="margin-top:14px;"><strong>We maintain a confidential and professional experience.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="faq">
+    <div class="container" style="max-width:900px;">
+      <div style="text-align:center; margin-bottom:28px;">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>Answers to common questions</h2>
+      </div>
+      <details>
+        <summary>How do I know if funds may be owed to me?</summary>
+        <p class="muted">If your situation involves a foreclosure, tax sale, inherited property issue, or another property-related matter, there may be funds tied to the case. We review available details and help determine whether a next step makes sense.</p>
+      </details>
+      <details>
+        <summary>What information do I need to get started?</summary>
+        <p class="muted">Usually your name, contact information, and any known property details help start the review. Additional documents may be requested later if needed.</p>
+      </details>
+      <details>
+        <summary>Do you guarantee results?</summary>
+        <p class="muted">No. Every matter is different, and outcomes depend on the facts, documentation, and applicable procedures. We never promise guaranteed results.</p>
+      </details>
+      <details>
+        <summary>Are you a law firm?</summary>
+        <p class="muted">No. Only Hope Homes Family Asset Recovery is not a law firm and does not provide legal advice. We provide professional recovery support and guidance based on public records and case review.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta-box">
+      <h2>Take the first step toward finding out whether funds may be waiting for you.</h2>
+      <p style="color:#cbd5e1; max-width:760px;">If you believe a foreclosure, tax sale, or other property-related issue may have involved funds tied to your name or family, contact us today for a confidential review.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-light">Request Your Review</a>
+        <a href="tel:+1-000-000-0000" class="btn btn-outline" style="border-color:rgba(255,255,255,0.25); background:transparent; color:white;">Call (000) 000-0000</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-title">Only Hope Homes Family Asset Recovery</div>
+        <p class="muted">A public-facing brand of <strong>Only Hope Holdings LLC</strong>, focused on helping individuals and families explore whether potential surplus or unclaimed funds may be tied to their property-related situations.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <ul class="clean muted">
+          <li>Phone: (000) 000-0000</li>
+          <li>Email: info@onlyhopehomes.com</li>
+          <li>Hours: Mon–Fri, 9:00 AM–5:00 PM</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Important Notice</strong>
+        <p class="muted">Only Hope Homes Family Asset Recovery is not a law firm and does not provide legal advice. No representation is made that funds are guaranteed or that every inquiry will qualify. Services are offered through Only Hope Holdings LLC.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
