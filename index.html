@@ -285,9 +285,13 @@
       <div id="contact" class="card contact-card">
         <h3>Request a confidential review</h3>
         <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
-        <form action="https://formspree.io/f/xykllerw" method="POST">
-  
+       <form action="https://formspree.io/f/xykllerw" method="POST">
+
+  <!-- Email subject -->
   <input type="hidden" name="_subject" value="New Only Hope Family Assets Group Lead" />
+
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_next" value="https://onlyhopefamilyassets.com/thank-you.html" />
 
   <label>Full Name</label>
   <input type="text" name="full_name" placeholder="Your full name" required />
@@ -304,13 +308,9 @@
   <label>Tell Us a Little About Your Situation (Optional)</label>
   <textarea name="message" placeholder="Share anything that may help us review your case"></textarea>
 
-  <button type="submit" class="btn btn-dark" style="width:100%; border:none; cursor:pointer;">
+  <button type="submit" class="btn btn-dark" style="width:100%;">
     Submit for Review
   </button>
-
-  <p class="small muted">
-    By submitting this form, you agree to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group.
-  </p>
 
 </form>
          
