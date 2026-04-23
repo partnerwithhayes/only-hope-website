@@ -285,25 +285,33 @@
       <div id="contact" class="card contact-card">
         <h3>Request a confidential review</h3>
         <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
-        <form>
-          <label>Full Name</label>
-          <input type="text" placeholder="Your full name" />
+        <form> 
+          <form action="https://formspree.io/f/xykllerw" method="POST">
+  <input type="hidden" name="_subject" value="New Only Hope Family Assets Group Lead" />
 
-          <label>Phone Number</label>
-          <input type="tel" placeholder="(000) 000-0000" />
+  <label>Full Name</label>
+  <input type="text" name="full_name" placeholder="Your full name" required />
 
-          <label>Email Address</label>
-          <input type="email" placeholder="you@example.com" />
+  <label>Phone Number</label>
+  <input type="tel" name="phone" placeholder="(000) 000-0000" required />
 
-          <label>Property Address or County (Optional)</label>
-          <input type="text" placeholder="Property address or county" />
+  <label>Email Address</label>
+  <input type="email" name="email" placeholder="you@example.com" required />
 
-          <label>Tell Us a Little About Your Situation (Optional)</label>
-          <textarea placeholder="Share anything that may help us review your case"></textarea>
+  <label>Property Address or County (Optional)</label>
+  <input type="text" name="property_address_or_county" placeholder="Property address or county" />
 
-          <button type="submit" class="btn btn-dark" style="width:100%; border:none; cursor:pointer;">Submit for Review</button>
-          <p class="small muted">By submitting this form, you agree to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group, regarding your inquiry.</p>
-        <form action="https://formspree.io/f/xykllerw" method="POST">
+  <label>Tell Us a Little About Your Situation (Optional)</label>
+  <textarea name="message" placeholder="Share anything that may help us review your case"></textarea>
+
+  <button type="submit" class="btn btn-dark" style="width:100%; border:none; cursor:pointer;">
+    Submit for Review
+  </button>
+
+  <p class="small muted">
+    By submitting this form, you agree to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group, regarding your inquiry.
+  </p>
+</form>
     </div>
   </section>
 
