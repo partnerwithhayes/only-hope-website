@@ -7,250 +7,216 @@
   <meta name="description" content="Discover if you may be owed surplus funds from a property. Only Hope Family Assets Group provides professional asset recovery with no upfront costs." />
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --light: #f8fafc;
-      --border: #e2e8f0;
-      --dark: #020617;
-      --card: #ffffff;
-      --gold: #C9A14A;
+      --bg:#ffffff; --text:#0f172a; --muted:#475569; --light:#f8fafc; --border:#e2e8f0; --dark:#020617; --gold:#C9A14A;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    .btn { display: inline-block; padding: 14px 22px; border-radius: 14px; font-weight: 700; transition: 0.2s ease; }
-    .btn-dark { background: var(--dark); color: white; }
-    .btn-dark:hover, .btn-light:hover, .btn-outline:hover { opacity: 0.92; }
-    .btn-light { background: white; color: var(--dark); }
-    .btn-outline { border: 1px solid var(--border); background: white; color: var(--text); }
-    .topbar { position: sticky; top: 0; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 10; }
-    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; }
-    .brand-title { font-size: 20px; font-weight: 800; }
-    .brand-sub { font-size: 12px; color: var(--muted); }
-    nav { display: flex; gap: 20px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
-    .hero { background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%); padding: 72px 0; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 42px; align-items: center; }
-    .eyebrow { display: inline-block; padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; background: white; font-size: 12px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
-    h1 { font-size: clamp(38px, 5vw, 60px); line-height: 1.05; margin: 18px 0; }
-    h2 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin: 0 0 12px; }
-    p { max-width: 700px; line-height: 1.7; margin-bottom: 16px; }
-    .lead { font-size: 19px; color: var(--muted); margin-bottom: 14px; max-width: 650px; }
-    .sublead { color: var(--muted); font-size: 16px; max-width: 650px; }
-    .card p { max-width: 100%; }
-    h1, h2 { max-width: 800px; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
-    .mini-grid, .three-grid, .four-grid, .two-grid { display: grid; gap: 18px; }
-    .mini-grid { grid-template-columns: repeat(3, 1fr); margin-top: 30px; }
-    .three-grid { grid-template-columns: repeat(3, 1fr); }
-    .four-grid { grid-template-columns: repeat(4, 1fr); }
-    .two-grid { grid-template-columns: repeat(2, 1fr); align-items: start; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05); }
-    .contact-card { padding: 30px; }
-    .contact-card h3 { margin-top: 0; font-size: 28px; }
-    label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; }
-    input, textarea { width: 100%; padding: 14px 16px; border: 1px solid #cbd5e1; border-radius: 14px; font-size: 15px; outline: none; margin-bottom: 14px; }
-    input[type="checkbox"] { width: auto; margin-right: 8px; transform: scale(1.1); }
-    textarea { min-height: 120px; resize: vertical; }
-    .muted { color: var(--muted); }
-    .small { font-size: 13px; }
-    .highlight { font-weight: bold; color: #020617; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 14px; }
-    .consent-box { display: flex; align-items: flex-start; gap: 8px; padding: 14px; border: 1px solid var(--border); border-radius: 14px; background: var(--light); margin-bottom: 14px; font-size: 13px; font-weight: 500; color: var(--text); }
-    .section { padding: 78px 0; }
-    .section-light { background: var(--light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .dark-section { background: var(--dark); color: white; }
-    .dark-section .muted, .dark-section p { color: #cbd5e1; }
-    .dark-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; padding: 24px; }
-    .num { width: 48px; height: 48px; border-radius: 16px; background: var(--dark); color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px; }
-    details { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 20px 22px; margin-bottom: 14px; }
-    summary { cursor: pointer; font-weight: 700; font-size: 18px; }
-    .cta-box { background: var(--dark); color: white; border-radius: 32px; padding: 42px; box-shadow: 0 20px 40px rgba(2, 6, 23, 0.18); }
-    .footer { border-top: 1px solid var(--border); background: white; padding: 40px 0; }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 28px; }
-    ul.clean { list-style: none; padding: 0; margin: 12px 0 0; }
-    ul.clean li { margin-bottom: 8px; }
-    .legal-links { margin-top: 16px; }
-    .legal-links a { text-decoration: underline; }
-    @media (max-width: 960px) {
-      .hero-grid, .two-grid, .footer-grid, .four-grid, .three-grid, .mini-grid { grid-template-columns: 1fr; }
-      nav { display: none; }
-      .topbar-inner { align-items: flex-start; }
-      .cta-box { padding: 28px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    p { max-width:700px; line-height:1.7; margin-bottom:16px; }
+    h1,h2 { max-width:800px; }
+    .container { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    .btn { display:inline-block; padding:14px 22px; border-radius:14px; font-weight:700; transition:.2s ease; }
+    .btn-dark { background:var(--dark); color:white; }
+    .btn-light { background:white; color:var(--dark); }
+    .btn-outline { border:1px solid var(--border); background:white; color:var(--text); }
+    .topbar { position:sticky; top:0; background:rgba(255,255,255,.96); border-bottom:1px solid var(--border); z-index:10; }
+    .topbar-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:16px 0; }
+    .brand-title { font-size:20px; font-weight:800; }
+    .brand-sub { font-size:12px; color:var(--muted); }
+    nav { display:flex; gap:20px; font-size:14px; color:var(--muted); flex-wrap:wrap; }
+    .hero { background:linear-gradient(135deg,#f8fafc 0%,#ffffff 50%,#f1f5f9 100%); padding:72px 0; }
+    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center; }
+    .eyebrow { display:inline-block; padding:8px 14px; border:1px solid var(--border); border-radius:999px; background:white; font-size:12px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+    h1 { font-size:clamp(38px,5vw,60px); line-height:1.05; margin:18px 0; }
+    h2 { font-size:clamp(28px,4vw,42px); line-height:1.15; margin:0 0 12px; }
+    .lead { font-size:19px; color:var(--muted); max-width:650px; }
+    .sublead { color:var(--muted); font-size:16px; max-width:650px; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
+    .mini-grid,.three-grid,.four-grid,.two-grid { display:grid; gap:18px; }
+    .mini-grid { grid-template-columns:repeat(3,1fr); margin-top:30px; }
+    .three-grid { grid-template-columns:repeat(3,1fr); }
+    .four-grid { grid-template-columns:repeat(4,1fr); }
+    .two-grid { grid-template-columns:repeat(2,1fr); align-items:start; }
+    .card { background:white; border:1px solid var(--border); border-radius:24px; padding:24px; box-shadow:0 10px 30px rgba(15,23,42,.05); }
+    .card p { max-width:100%; }
+    .contact-card { padding:30px; }
+    .contact-card h3 { margin-top:0; font-size:28px; }
+    .highlight { font-weight:bold; color:#020617; background:#f8fafc; border:1px solid #e2e8f0; padding:12px 14px; border-radius:14px; }
+    .tally-form-wrapper { width:100%; overflow:hidden; border-radius:18px; margin-top:16px; }
+    .muted { color:var(--muted); }
+    .small { font-size:13px; }
+    .section { padding:78px 0; }
+    .section-light { background:var(--light); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .dark-section { background:var(--dark); color:white; }
+    .dark-section p { color:#cbd5e1; }
+    .dark-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:24px; padding:24px; }
+    .num { width:48px; height:48px; border-radius:16px; background:var(--dark); color:white; display:inline-flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:16px; }
+    details { background:white; border:1px solid var(--border); border-radius:20px; padding:20px 22px; margin-bottom:14px; }
+    summary { cursor:pointer; font-weight:700; font-size:18px; }
+    .cta-box { background:var(--dark); color:white; border-radius:32px; padding:42px; box-shadow:0 20px 40px rgba(2,6,23,.18); }
+    .footer { border-top:1px solid var(--border); background:white; padding:40px 0; }
+    .footer-grid { display:grid; grid-template-columns:1.2fr .8fr 1fr; gap:28px; }
+    ul.clean { list-style:none; padding:0; margin:12px 0 0; }
+    ul.clean li { margin-bottom:8px; }
+    .legal-links a { text-decoration:underline; }
+    @media (max-width:960px) {
+      .hero-grid,.two-grid,.footer-grid,.four-grid,.three-grid,.mini-grid { grid-template-columns:1fr; }
+      nav { display:none; }
+      .cta-box { padding:28px; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div>
-        <div class="brand-title">Only Hope Family Assets Group</div>
-        <div class="brand-sub">A brand of Only Hope Holdings LLC</div>
-      </div>
-      <nav>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#who-we-help">Who We Help</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="#contact" class="btn btn-dark">Check Eligibility</a>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Helping families recover funds tied to property-related situations</div>
-        <h1>You may be owed money and not even know it.</h1>
-        <p class="lead">Only Hope Family Assets Group helps individuals and families identify and pursue potential surplus or unclaimed funds related to foreclosures, tax sales, equity recovery, and other property-related matters.</p>
-        <p class="sublead">We focus on clarity, compassion, and results by guiding clients through the recovery process with professional support, careful case review, and access to a trusted attorney network experienced in surplus recovery matters when legal support is appropriate.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-dark">See If You May Qualify</a>
-          <a href="#how-it-works" class="btn btn-outline">Learn How It Works</a>
-        </div>
-        <div class="mini-grid">
-          <div class="card"><strong>No upfront cost</strong><p class="small muted">Our services are designed to help you explore your options before money is recovered.</p></div>
-          <div class="card"><strong>Confidential review</strong><p class="small muted">Your information is handled professionally and respectfully from start to finish.</p></div>
-          <div class="card"><strong>Attorney-supported process</strong><p class="small muted">When needed, clients may receive support through attorneys familiar with surplus recovery matters.</p></div>
-        </div>
-      </div>
-      <div id="contact" class="card contact-card">
-        <h3>Request a confidential review</h3>
-        <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
-        <p class="highlight">No upfront cost • Confidential review • Attorney-supported process</p>
-        <form action="https://formspree.io/f/xykllerw" method="POST">
-          <input type="hidden" name="_subject" value="New Only Hope Family Assets Group Lead" />
-          <input type="hidden" name="_next" value="/thank-you.html" />
-          <label>Full Name</label>
-          <input type="text" name="full_name" placeholder="Your full name" required />
-          <label>Phone Number</label>
-          <input type="tel" name="phone" placeholder="(860) 499-1077" required />
-          <label>Email Address</label>
-          <input type="email" name="email" placeholder="you@example.com" required />
-          <label>Property Address or County (Optional)</label>
-          <input type="text" name="property_address_or_county" placeholder="Property address or county" />
-          <label>Tell Us a Little About Your Situation (Optional)</label>
-          <textarea name="message" placeholder="Share anything that may help us review your case"></textarea>
-          <label class="consent-box">
-            <input type="checkbox" name="communication_consent" value="I agree to phone, SMS, email, and AI voice agent contact" required />
-            <span>I agree to receive communications from Only Hope Family Assets Group via phone calls, SMS/text messages, email, and AI voice agent regarding my inquiry.</span>
-          </label>
-          <button type="submit" class="btn btn-dark" style="width:100%; border:none; cursor:pointer;">Submit for Review</button>
-          <p class="small muted">By submitting this form, you consent to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group, via phone calls, SMS/text messages, email, and AI voice agent communications regarding your inquiry. Message & data rates may apply. Message frequency varies. You may opt out at any time by replying STOP or requesting to unsubscribe.</p>
-        </form>
-      </div>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div>
+      <div class="brand-title">Only Hope Family Assets Group</div>
+      <div class="brand-sub">A brand of Only Hope Holdings LLC</div>
     </div>
-  </section>
+    <nav>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#who-we-help">Who We Help</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-dark">Check Eligibility</a>
+  </div>
+</header>
 
-  <section class="section section-light">
-    <div class="container three-grid">
-      <div class="card"><strong>Respectful communication</strong><p class="muted">We understand that property-related financial situations can feel stressful, personal, and confusing, so our approach is patient, professional, and focused on helping you understand your options.</p></div>
-      <div class="card"><strong>Clear next steps</strong><p class="muted">We explain the process in plain language so you know what may be possible, what information may be needed, and what happens next before moving forward.</p></div>
-      <div class="card"><strong>Information-driven review</strong><p class="muted">Our process is based on public records, case details, client verification, and careful review designed to determine whether a potential claim may exist.</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="how-it-works">
-    <div class="container">
-      <p class="eyebrow">How it works</p>
-      <h2>A simple process designed to help you move forward with confidence.</h2>
-      <p class="sublead">We help identify whether potential funds may be tied to your name or property situation, then guide you through the steps needed to pursue recovery.</p>
-      <div class="three-grid" style="margin-top:32px;">
-        <div class="card"><div class="num">1</div><h3>Initial Review</h3><p class="muted">We review the details you provide and compare them with available records to determine whether surplus funds, equity recovery opportunities, or other property-related funds may be involved.</p></div>
-        <div class="card"><div class="num">2</div><h3>Verification & Guidance</h3><p class="muted">If your case appears eligible, we explain the process, required documentation, and next steps, including when attorney-supported assistance may be appropriate for your matter.</p></div>
-        <div class="card"><div class="num">3</div><h3>Recovery Support</h3><p class="muted">We assist throughout the process of pursuing potential funds and may coordinate with a trusted network of attorneys who understand surplus recovery procedures when specialized legal support is needed.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section dark-section" id="who-we-help">
-    <div class="container">
-      <p class="eyebrow" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border-color:rgba(255,255,255,0.14);">Who we help</p>
-      <h2>Support for individuals and families who may have funds waiting to be claimed.</h2>
-      <p class="sublead" style="color:#cbd5e1;">Every situation is different. We work with people who may have experienced a foreclosure, tax sale, inherited property issue, eviction concern, cash-for-keys transition, or other property-related event that may have resulted in excess funds, remaining equity, or unclaimed funds.</p>
-      <div class="four-grid" style="margin-top:32px;">
-        <div class="dark-card"><h3>Former homeowners</h3><p>People who may have had a foreclosure or property-related matter and are unsure whether funds remain.</p></div>
-        <div class="dark-card"><h3>Heirs and family members</h3><p>Families trying to determine whether a relative may have had funds tied to a property matter.</p></div>
-        <div class="dark-card"><h3>Property-related claimants</h3><p>Individuals seeking clarity on whether they may be eligible to pursue unclaimed surplus funds or equity recovery.</p></div>
-        <div class="dark-card"><h3>Clients who need guidance</h3><p>People who want help understanding paperwork, next steps, eviction-related options, or transition support.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container two-grid">
-      <div>
-        <p class="eyebrow">Additional support services</p>
-        <h2>More than surplus recovery support.</h2>
-        <p class="sublead">Only Hope Family Assets Group also provides guidance for related property situations, including eviction defense support, cash-for-keys assistance, and equity recovery, so clients can better understand practical options during stressful transitions.</p>
-      </div>
-      <div>
-        <div class="card"><strong>Eviction defense support</strong><p class="muted">We help clients understand available options, next steps, and potential support resources when facing displacement or property-related pressure.</p></div>
-        <div class="card" style="margin-top:14px;"><strong>Cash for keys assistance</strong><p class="muted">We assist with transition-focused conversations and options that may help create a smoother exit process when appropriate.</p></div>
-        <div class="card" style="margin-top:14px;"><strong>Equity recovery</strong><p class="muted">We help clients explore whether remaining value, funds, or equity may be connected to a property-related situation.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container two-grid">
-      <div>
-        <p class="eyebrow">Why choose us</p>
-        <h2>A caring, professional approach to a sensitive process.</h2>
-        <p class="sublead">Our goal is simple: help people understand whether funds may be owed to them and provide professional support throughout the process.</p>
-      </div>
-      <div>
-        <div class="card"><strong>We communicate clearly and respectfully.</strong></div>
-        <div class="card" style="margin-top:14px;"><strong>We explain the process in plain language.</strong></div>
-        <div class="card" style="margin-top:14px;"><strong>We focus on property-related records, case review, and attorney-supported guidance when needed.</strong></div>
-        <div class="card" style="margin-top:14px;"><strong>We help clients understand documentation and next steps.</strong></div>
-        <div class="card" style="margin-top:14px;"><strong>We maintain a confidential and professional experience.</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light" id="faq">
-    <div class="container" style="max-width:900px;">
-      <div style="text-align:center; margin-bottom:28px;"><p class="eyebrow">Frequently asked questions</p><h2>Answers to common questions</h2></div>
-      <details><summary>How do I know if funds may be owed to me?</summary><p class="muted">If your situation involves a foreclosure, tax sale, inherited property issue, equity concern, or another property-related matter, there may be funds tied to the case. We review available details and help determine whether a next step makes sense.</p></details>
-      <details><summary>What information do I need to get started?</summary><p class="muted">Usually your name, contact information, and any known property details help start the review. Additional documents may be requested later if needed.</p></details>
-      <details><summary>Do you guarantee results?</summary><p class="muted">No. Every matter is different, and outcomes depend on the facts, documentation, county procedures, and applicable requirements. We never promise guaranteed results.</p></details>
-      <details><summary>Are you a law firm?</summary><p class="muted">No. Only Hope Family Assets Group is not a law firm and does not provide legal advice. We provide professional recovery support and may coordinate with attorneys experienced in surplus recovery matters when legal assistance is appropriate.</p></details>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container cta-box">
-      <h2>Take the first step toward finding out whether funds may be waiting for you.</h2>
-      <p style="color:#cbd5e1; max-width:760px;">If you believe a foreclosure, tax sale, eviction-related transition, or other property-related issue may have involved funds tied to your name or family, contact us today for a confidential review.</p>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Helping families recover funds tied to property-related situations</div>
+      <h1>You may be owed money and not even know it.</h1>
+      <p class="lead">Only Hope Family Assets Group helps individuals and families identify and pursue potential surplus or unclaimed funds related to foreclosures, tax sales, equity recovery, and other property-related matters.</p>
+      <p class="sublead">We guide clients through the recovery process with professional support, careful case review, and access to a trusted attorney network experienced in surplus recovery matters when legal support is appropriate.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-light">Request Your Review</a>
-        <a href="tel:+18604991077" class="btn btn-outline" style="border-color:rgba(255,255,255,0.25); background:transparent; color:white;">Call (860) 499-1077</a>
+        <a href="#contact" class="btn btn-dark">See If You May Qualify</a>
+        <a href="tel:+18604991077" class="btn btn-outline">Call (860) 499-1077</a>
+      </div>
+      <div class="mini-grid">
+        <div class="card"><strong>No upfront cost</strong><p class="small muted">Our services are designed to help you explore your options before money is recovered.</p></div>
+        <div class="card"><strong>Confidential review</strong><p class="small muted">Your information is handled professionally and respectfully from start to finish.</p></div>
+        <div class="card"><strong>Attorney-supported process</strong><p class="small muted">When needed, clients may receive support through attorneys familiar with surplus recovery matters.</p></div>
       </div>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand-title">Only Hope Family Assets Group</div>
-        <p class="muted">A public-facing brand of <strong>Only Hope Holdings LLC</strong>, focused on helping individuals and families explore whether potential surplus or unclaimed funds may be tied to their property-related situations.</p>
-        <p class="small muted legal-links"><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
+    <div id="contact" class="card contact-card">
+      <h3>Request a confidential review</h3>
+      <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
+      <p class="highlight">No upfront cost • Confidential review • Attorney-supported process</p>
+
+      <div class="tally-form-wrapper">
+        <iframe data-tally-src="https://tally.so/embed/YOURFORMID?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Only Hope Family Assets Group Confidential Review Form"></iframe>
       </div>
-      <div>
-        <strong>Contact</strong>
-        <ul class="clean muted">
-          <li>Phone: (860) 499-1077</li>
-          <li>Email: info@onlyhopefamilyassetsgroup.com</li>
-          <li>Hours: Mon–Fri, 9:00 AM–5:00 PM</li>
-        </ul>
-      </div>
-      <div>
-        <strong>Important Notice</strong>
-        <p class="muted">Only Hope Family Assets Group is not a law firm and does not provide legal advice. No representation is made that funds are guaranteed or that every inquiry will qualify. When appropriate, we may coordinate with attorneys experienced in surplus recovery matters. Services are offered through Only Hope Holdings LLC.</p>
-      </div>
+
+      <p class="small muted">By submitting this form, you consent to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group, via phone calls, SMS/text messages, email, and AI voice agent communications regarding your inquiry. Message and data rates may apply. Message frequency varies. You may opt out at any time by replying STOP or requesting to unsubscribe.</p>
     </div>
-  </footer>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container three-grid">
+    <div class="card"><strong>Respectful communication</strong><p class="muted">We understand that property-related financial situations can feel stressful, personal, and confusing, so our approach is patient, professional, and focused on helping you understand your options.</p></div>
+    <div class="card"><strong>Clear next steps</strong><p class="muted">We explain the process in plain language so you know what may be possible, what information may be needed, and what happens next before moving forward.</p></div>
+    <div class="card"><strong>Information-driven review</strong><p class="muted">Our process is based on public records, case details, client verification, and careful review designed to determine whether a potential claim may exist.</p></div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <p class="eyebrow">How it works</p>
+    <h2>A simple process designed to help you move forward with confidence.</h2>
+    <p class="sublead">We help identify whether potential funds may be tied to your name or property situation, then guide you through the steps needed to pursue recovery.</p>
+    <div class="three-grid" style="margin-top:32px;">
+      <div class="card"><div class="num">1</div><h3>Initial Review</h3><p class="muted">We review the details you provide and compare them with available records to determine whether surplus funds, equity recovery opportunities, or other property-related funds may be involved.</p></div>
+      <div class="card"><div class="num">2</div><h3>Verification & Guidance</h3><p class="muted">If your case appears eligible, we explain the process, required documentation, and next steps, including when attorney-supported assistance may be appropriate for your matter.</p></div>
+      <div class="card"><div class="num">3</div><h3>Recovery Support</h3><p class="muted">We assist throughout the process of pursuing potential funds and may coordinate with attorneys who understand surplus recovery procedures when specialized legal support is needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section" id="who-we-help">
+  <div class="container">
+    <p class="eyebrow" style="background:rgba(255,255,255,.06);color:#cbd5e1;border-color:rgba(255,255,255,.14);">Who we help</p>
+    <h2>Support for individuals and families who may have funds waiting to be claimed.</h2>
+    <p class="sublead" style="color:#cbd5e1;">Every situation is different. We work with people who may have experienced a foreclosure, tax sale, inherited property issue, eviction concern, cash-for-keys transition, or other property-related event that may have resulted in excess funds, remaining equity, or unclaimed funds.</p>
+    <div class="four-grid" style="margin-top:32px;">
+      <div class="dark-card"><h3>Former homeowners</h3><p>People who may have had a foreclosure or property-related matter and are unsure whether funds remain.</p></div>
+      <div class="dark-card"><h3>Heirs and family members</h3><p>Families trying to determine whether a relative may have had funds tied to a property matter.</p></div>
+      <div class="dark-card"><h3>Property-related claimants</h3><p>Individuals seeking clarity on whether they may be eligible to pursue unclaimed surplus funds or equity recovery.</p></div>
+      <div class="dark-card"><h3>Clients who need guidance</h3><p>People who want help understanding paperwork, next steps, eviction-related options, or transition support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-grid">
+    <div>
+      <p class="eyebrow">Additional support services</p>
+      <h2>More than surplus recovery support.</h2>
+      <p class="sublead">Only Hope Family Assets Group also provides guidance for related property situations, including eviction defense support, cash-for-keys assistance, and equity recovery, so clients can better understand practical options during stressful transitions.</p>
+    </div>
+    <div>
+      <div class="card"><strong>Eviction defense support</strong><p class="muted">We help clients understand available options, next steps, and potential support resources when facing displacement or property-related pressure.</p></div>
+      <div class="card" style="margin-top:14px;"><strong>Cash for keys assistance</strong><p class="muted">We assist with transition-focused conversations and options that may help create a smoother exit process when appropriate.</p></div>
+      <div class="card" style="margin-top:14px;"><strong>Equity recovery</strong><p class="muted">We help clients explore whether remaining value, funds, or equity may be connected to a property-related situation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="faq">
+  <div class="container" style="max-width:900px;">
+    <div style="text-align:center;margin-bottom:28px;">
+      <p class="eyebrow">Frequently asked questions</p>
+      <h2>Answers to common questions</h2>
+    </div>
+    <details><summary>How do I know if funds may be owed to me?</summary><p class="muted">If your situation involves a foreclosure, tax sale, inherited property issue, equity concern, or another property-related matter, there may be funds tied to the case. We review available details and help determine whether a next step makes sense.</p></details>
+    <details><summary>Do you charge upfront?</summary><p class="muted">Our services are offered with no upfront cost. Specific terms are discussed before engagement so you understand how the process works before moving forward.</p></details>
+    <details><summary>Do you guarantee results?</summary><p class="muted">No. Every matter is different, and outcomes depend on the facts, documentation, county procedures, and applicable requirements. We never promise guaranteed results.</p></details>
+    <details><summary>Are you a law firm?</summary><p class="muted">No. Only Hope Family Assets Group is not a law firm and does not provide legal advice. We provide professional recovery support and may coordinate with attorneys experienced in surplus recovery matters when legal assistance is appropriate.</p></details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cta-box">
+    <h2>Take the first step toward finding out whether funds may be waiting for you.</h2>
+    <p style="color:#cbd5e1;max-width:760px;">If you believe a foreclosure, tax sale, eviction-related transition, or other property-related issue may have involved funds tied to your name or family, contact us today for a confidential review.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-light">Request Your Review</a>
+      <a href="tel:+18604991077" class="btn btn-outline" style="border-color:rgba(255,255,255,.25);background:transparent;color:white;">Call (860) 499-1077</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand-title">Only Hope Family Assets Group</div>
+      <p class="muted">A public-facing brand of <strong>Only Hope Holdings LLC</strong>, focused on helping individuals and families explore whether potential surplus or unclaimed funds may be tied to their property-related situations.</p>
+      <p class="small muted legal-links"><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <ul class="clean muted">
+        <li>Phone: (860) 499-1077</li>
+        <li>Email: info@onlyhopefamilyassetsgroup.com</li>
+        <li>Hours: Mon–Fri, 9:00 AM–5:00 PM</li>
+      </ul>
+    </div>
+    <div>
+      <strong>Important Notice</strong>
+      <p class="muted">Only Hope Family Assets Group is not a law firm and does not provide legal advice. No representation is made that funds are guaranteed or that every inquiry will qualify. When appropriate, we may coordinate with attorneys experienced in surplus recovery matters. Services are offered through Only Hope Holdings LLC.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var d=document,w="https://tally.so/widgets/embed.js",v=function(){if(typeof Tally!=="undefined"){Tally.loadEmbeds();}else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;});}};
+if(typeof Tally!=="undefined"){v();}else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
+</script>
+
 </body>
 </html>
