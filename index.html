@@ -52,6 +52,15 @@
     .contact-card h3 { margin-top: 0; font-size: 28px; }
     .highlight { font-weight: bold; color: #020617; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 14px; max-width: 100%; }
     .tally-form-wrapper { width: 100%; overflow: hidden; border-radius: 18px; margin-top: 16px; background: white; }
+    .lead-form { margin-top: 18px; }
+    .lead-form label { display: block; font-weight: 700; margin-top: 14px; }
+    .lead-form input, .lead-form select, .lead-form textarea { width: 100%; margin-top: 6px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 14px; font: inherit; color: var(--text); background: white; }
+    .lead-form textarea { resize: vertical; min-height: 110px; }
+    .sms-consent-box { margin-top: 18px; padding: 16px; border: 1px solid var(--border); border-radius: 18px; background: white; }
+    .sms-consent-label { display: flex !important; align-items: flex-start; gap: 10px; margin-top: 0 !important; font-weight: 400 !important; font-size: 13px; line-height: 1.55; color: var(--muted); }
+    .sms-consent-label input { width: auto !important; margin-top: 4px !important; flex: 0 0 auto; }
+    .sms-consent-label a { text-decoration: underline; color: var(--text); font-weight: 700; }
+    .form-submit { border: 0; cursor: pointer; margin-top: 18px; }
     .muted { color: var(--muted); }
     .small { font-size: 13px; }
     .section { padding: 78px 0; }
@@ -117,10 +126,51 @@
         <h3>Request a confidential review</h3>
         <p class="muted">Complete the form below and someone from our team will contact you to discuss whether funds may be tied to your situation.</p>
         <p class="highlight">No upfront cost • Confidential review • Attorney-supported process</p>
-        <div class="tally-form-wrapper">
-          <iframe data-tally-src="https://tally.so/embed/Np4evQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Only Hope Family Assets Group Confidential Review Form"></iframe>
-        </div>
-        <p class="small muted">By submitting this form, you consent to be contacted by Only Hope Holdings LLC, doing business as Only Hope Family Assets Group, via phone calls, SMS/text messages, email, and AI voice agent communications regarding your inquiry. Message and data rates may apply. Message frequency varies. You may opt out at any time by replying STOP or requesting to unsubscribe.</p>
+        <form class="lead-form" action="#" method="post">
+          <label for="full_name">Full Name</label>
+          <input type="text" id="full_name" name="full_name" required>
+
+          <label for="phone">Phone Number <span class="muted small">(optional)</span></label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="situation">What best describes your situation?</label>
+          <select id="situation" name="situation">
+            <option value="">Please select</option>
+            <option value="foreclosure-surplus">Foreclosure-related surplus funds</option>
+            <option value="tax-sale-surplus">Tax sale surplus funds</option>
+            <option value="inherited-property">Inherited property issue</option>
+            <option value="equity-recovery">Equity recovery question</option>
+            <option value="eviction-support">Eviction-related transition support</option>
+            <option value="cash-for-keys">Cash-for-keys assistance</option>
+            <option value="other">Other property-related matter</option>
+          </select>
+
+          <label for="message">Tell us briefly what happened</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <div class="sms-consent-box">
+            <label class="sms-consent-label">
+              <input type="checkbox" id="sms_ai_consent" name="sms_ai_consent" value="yes">
+              <span>
+                By providing your phone number and checking this box, you agree to receive SMS customer support,
+                appointment reminder, account notification, service-related, and occasional marketing messages,
+                as well as phone calls and AI-assisted voice communications from Only Hope Holdings LLC,
+                doing business as Only Hope Family Assets Group. Message frequency may vary. Standard Message
+                and Data Rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition
+                of purchase. We will not share or sell your mobile information with third parties for promotional
+                or marketing purposes. View our
+                <a href="https://www.onlyhopefamilyassets.com/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                and
+                <a href="https://www.onlyhopefamilyassets.com/terms.html" target="_blank" rel="noopener">Terms & Conditions</a>.
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-dark form-submit">Submit Request</button>
+        </form>
       </div>
     </div>
   </section>
@@ -218,9 +268,5 @@
     </div>
   </footer>
 
-  <script>
-    var d=document,w="https://tally.so/widgets/embed.js",v=function(){if(typeof Tally!=="undefined"){Tally.loadEmbeds();}else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc;});}};
-    if(typeof Tally!=="undefined"){v();}else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
-  </script>
 </body>
 </html>
