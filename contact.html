@@ -1,32 +1,106 @@
-<div class="tally-form">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Only Hope Family Assets Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<iframe
-data-tally-src="https://tally.so/r/Np4evQ"
-loading="lazy"
-width="100%"
-height="1600"
-frameborder="0"
-marginheight="0"
-marginwidth="0"
-title="Only Hope Family Assets Group">
-</iframe>
+<header>
+  <div class="container header-inner">
+    <div>
+      <div class="logo">Only Hope Family Assets Group</div>
+      <div class="logo-sub">A brand of Only Hope Holdings LLC</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Complete the form below. Phone number and SMS consent are optional.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container form-wrap">
+    <div class="card">
+
+      <div class="tally-form">
+        <iframe
+          data-tally-src="https://tally.so/r/Np4evQ"
+          loading="lazy"
+          width="100%"
+          height="1700"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Only Hope Family Assets Group Confidential Review Request">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <strong>Only Hope Family Assets Group</strong>
+      <p>A public-facing brand of Only Hope Holdings LLC helping individuals and families explore property-related recovery options.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms & Conditions</a>
+      </p>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <p>
+        Phone: (860) 499-1077<br>
+        Email: info@onlyhopefamilyassets.com<br>
+        Hours: Mon–Fri, 9:00 AM–5:00 PM
+      </p>
+    </div>
+    <div>
+      <strong>Important Notice</strong>
+      <p>
+        Only Hope Family Assets Group is not a law firm and does not provide legal advice.
+        No representation is made that funds are guaranteed or that every inquiry will qualify.
+      </p>
+    </div>
+  </div>
+</footer>
 
 <script>
 var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-if(typeof Tally!=="undefined"){Tally.loadEmbeds();}
-else{
-d.querySelectorAll("iframe[data-tally-src]:not([src])")
-.forEach(function(e){e.src=e.dataset.tallySrc;});
-}
+  if(typeof Tally!=="undefined"){
+    Tally.loadEmbeds();
+  } else {
+    d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+      e.src=e.dataset.tallySrc;
+    });
+  }
 };
-if(typeof Tally!=="undefined"){v();}
-else if(d.querySelector('script[src="'+w+'"]')==null){
-var s=d.createElement("script");
-s.src=w;
-s.onload=v;
-s.onerror=v;
-d.body.appendChild(s);
+if(typeof Tally!=="undefined"){
+  v();
+} else if(d.querySelector('script[src="'+w+'"]')==null){
+  var s=d.createElement("script");
+  s.src=w;
+  s.onload=v;
+  s.onerror=v;
+  d.body.appendChild(s);
 }
 </script>
 
-</div>
+</body>
+</html>
