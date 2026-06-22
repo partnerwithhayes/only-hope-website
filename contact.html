@@ -1,78 +1,32 @@
-<form class="contact-form">
+<div class="tally-form">
 
-<label for="name">Full Name *</label>
-<input type="text" id="name" name="name" required>
+<iframe
+data-tally-src="https://tally.so/r/Np4evQ"
+loading="lazy"
+width="100%"
+height="1600"
+frameborder="0"
+marginheight="0"
+marginwidth="0"
+title="Only Hope Family Assets Group">
+</iframe>
 
-<label for="phone">Phone Number</label>
-<input type="tel" id="phone" name="phone">
-<small>Phone number is optional and not required to submit this form.</small>
+<script>
+var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+if(typeof Tally!=="undefined"){Tally.loadEmbeds();}
+else{
+d.querySelectorAll("iframe[data-tally-src]:not([src])")
+.forEach(function(e){e.src=e.dataset.tallySrc;});
+}
+};
+if(typeof Tally!=="undefined"){v();}
+else if(d.querySelector('script[src="'+w+'"]')==null){
+var s=d.createElement("script");
+s.src=w;
+s.onload=v;
+s.onerror=v;
+d.body.appendChild(s);
+}
+</script>
 
-<label for="email">Email Address *</label>
-<input type="email" id="email" name="email" required>
-
-<label for="property">Property Address or County</label>
-<input type="text" id="property" name="property">
-
-<label for="message">Tell Us A Little About Your Situation</label>
-<textarea id="message" name="message" rows="6"></textarea>
-
-<div class="checkbox-box">
-<input
-type="checkbox"
-id="marketing_sms"
-name="marketing_sms">
-
-<label for="marketing_sms">
-I agree to receive marketing and promotional SMS messages from Only Hope Holdings LLC DBA Only Hope Family Assets Group, including service offers, follow-up messages, and promotional information. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase or service.
-</label>
 </div>
-
-<div class="checkbox-box">
-<input
-type="checkbox"
-id="non_marketing_sms"
-name="non_marketing_sms">
-
-<label for="non_marketing_sms">
-I agree to receive non-marketing SMS messages from Only Hope Holdings LLC DBA Only Hope Family Assets Group, including customer support messages, appointment reminders, service updates, requested information, account notifications, and service-related communications. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase or service.
-</label>
-</div>
-
-<div class="checkbox-box">
-<input
-type="checkbox"
-id="sms_disclosure"
-name="sms_disclosure">
-
-<label for="sms_disclosure">
-By providing your phone number and selecting one or both SMS consent options above, you agree to receive the communications you have selected from Only Hope Holdings LLC DBA Only Hope Family Assets Group.
-
-Marketing SMS may include promotional information, service offers, follow-up messages, and educational content.
-
-Non-marketing SMS may include customer support, appointment reminders, service updates, requested information, account notifications, and service-related communications.
-
-Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase or service.
-
-No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
-</label>
-</div>
-
-<button type="submit" class="btn">
-Submit
-</button>
-
-<p class="form-links">
-Privacy Policy:
-<a href="privacy-policy.html">
-https://www.onlyhopefamilyassets.com/privacy-policy.html
-</a>
-</p>
-
-<p class="form-links">
-Terms & Conditions:
-<a href="terms.html">
-https://www.onlyhopefamilyassets.com/terms.html
-</a>
-</p>
-
-</form>
